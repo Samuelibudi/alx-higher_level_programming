@@ -15,5 +15,5 @@ if __name__ == "__main__":
         n_args = 0
         for i in sys.argv:
             if n_args != 0:
-                print("{}: {}".format(n_args, i)
+                print("{}: {}".format(n_args, i))
             n_args += 1
