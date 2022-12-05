@@ -9,6 +9,9 @@
  * Description: singly linked list node structure
  * for project
  */
+
+#include <stdlib.h>
+
 typedef struct listint_s
 {
 	int n;
