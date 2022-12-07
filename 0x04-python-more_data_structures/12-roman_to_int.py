@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 def to_sub(list_num):
     sub = 0
     max_list = max(list_num)
