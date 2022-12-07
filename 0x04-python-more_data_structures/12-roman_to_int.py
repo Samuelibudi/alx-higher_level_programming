@@ -1,37 +1,38 @@
 #!/usr/bin/python
+def to_sub(list_num):
+    sub = 0
+    max_list = max(list_num)
+
+    for n in list_num:
+        if max_list > n:
+            sub += n
+    return (max_list - sub)
+
 
 def roman_to_int(roman_string):
-    lst = []
-    dec_num = 0
+    if not roman_string:
+        return 0
 
-    for let in roman_string:
-        lst.append(let)
+    if not isinstance(roman_string, str):
+        return 0
 
-    for i in range(len(lst)):
-        if lst[i] == 'I' and lst[i + 1] != 'V' and lst[i + 1] != 'X':
-            dec_num += 1
-        else:
-            dec_num -= 1
+    rom_n = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    list_keys = list(rom_n.keys())
 
-        if lst[i] == 'V':
-            dec_num += 5
+    num = 0
+    last_rom = 0
+    list_num = [0]
 
-        if lst[i] == 'X' and lst[i + 1] != 'L' and lst[i + 1] != 'C':
-            dec_num += 10
-        else:
-            dec_num -= 10
+    for ch in roman_string:
+        for r_num in list_keys:
+            if r_num == ch:
+                if rom_n.get(ch) <= last_rom:
+                    num += to_sub(list_num)
+                    list_num = [rom_n.get(ch)]
+                else:
+                    list_num.append(rom_n.get(ch))
 
-        if lst[i] == 'L':
-            dec_num += 50
+                last_rom = rom_n.get(ch)
 
-        if lst[i] == 'C' and lst[i+1] != 'D' and lst[i+1] != 'M':
-            dec_num += 100
-        else:
-            dec_num -= 100
-
-        if lst[i] == 'D':
-            dec_num += 500
-
-        if lst[i] == 'M':
-            dec_num += 1000
-    return dec_num
+    num += to_sub(list_num)
+    return num
