@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+"""Definition of a class"""
+
+
 class Square:
     """Class that defines a square by its size"""
 
@@ -6,7 +10,7 @@ class Square:
         """Method to initialise square object"""
 
         if not isinstance(size, int):
-            rasie TypeError("size must be an integer")
+            raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
@@ -56,10 +60,14 @@ class Square:
 
     def my_print(self):
         """ Method that prints a # square according to the size"""
-        if not self.__size:
+        if self.size == 0:
             print()
         else:
-            for i in range(self.__size):
-                for j in range(self.__size):
+            for i in range(self.position[1]):
+                print()
+            for i in range(0, self.size):
+                for k in range(self.position[0]):
+                    print(" ", end='')
+                for j in range(self.size):
                     print("#", end='')
                 print()

@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+"""Definition of a class"""
+
+
 class Square:
     """Class that defines a square by its size"""
 
@@ -6,7 +10,7 @@ class Square:
         """Method to initialise square object"""
 
         if not isinstance(size, int):
-            rasie TypeError("size must be an integer")
+            raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
