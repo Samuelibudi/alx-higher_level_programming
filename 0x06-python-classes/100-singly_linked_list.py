@@ -2,6 +2,7 @@
 
 """Definition of class node"""
 
+
 class Node:
     """Represent a node in a singly linked list"""
 
@@ -36,11 +37,10 @@ class Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
-"""Definition of class singly linked list"""
-
 
 class SinglyLinkedList:
     """Represent a singly-linked list."""
+
     def __str__(self):
         """Define the print() representation of a singlylinkedlist."""
         rtn = ""
