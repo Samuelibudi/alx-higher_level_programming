@@ -48,7 +48,7 @@ def queen(m_queen, nqueen):
         if issafe(m_queen, nqueen) is True:
 
             if nqueen is not len(m_queen):
-                Queen(m_queen, nqueen + 1)
+                queen(m_queen, nqueen + 1)
 
 
 def solveNQueen(size):
@@ -56,7 +56,7 @@ def solveNQueen(size):
 
     m_queen = [-1 for i in range(size)]
 
-    Queen(m_queen, 0)
+    queen(m_queen, 0)
 
 
 if __name__ == '__main__':
