@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module defines function that checks if an object 
+"""Module defines function that checks if an object
     is an instance of a class that inherited(directly
     or indirectly) from the specicified class."""
 
