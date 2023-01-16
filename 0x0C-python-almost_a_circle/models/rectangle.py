@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Module that contains class Rectangle,
-inheritance of class Base
+inherited from  class Base
 """
 from models.base import Base
 
