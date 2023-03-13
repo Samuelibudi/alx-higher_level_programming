@@ -2,15 +2,12 @@
 
 const num1 = Number(process.argv[2]);
 
-
 function fact (a) {
-	if (a === 1) {
-		return 1;
-	} else if (a === 'NaN'){
-		return 1;
-	} else {
-		return a + fact(a-1);
-	}
+  if (a === 1 || a === 0 || isNaN(a)) {
+    return 1;
+  } else {
+    return a * fact(a - 1);
+  }
 }
 
-console.log(fact(num1)); 
+console.log(fact(num1));
