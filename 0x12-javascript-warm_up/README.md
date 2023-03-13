@@ -1,8 +1,8 @@
-#Javascript warm-up
+# Javascript warm-up
 
 The following tasks were undertaken during study of **software engineering** at **ALX Institute**
 
-| #Task | #Description |
+| # Task | # Description |
 | ----- | ------------ |
 | 0-javascript_is_amazing.js | A script that prints "Javascript is amazing" |
 | 1-multi_language.js | A script that prints 3 lines |
