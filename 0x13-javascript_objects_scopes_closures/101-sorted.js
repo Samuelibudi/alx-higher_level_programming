@@ -1,12 +1,12 @@
 #!/usr/bin/node
-const dict = require('./101-data').dict;
+const { dict } = require('./101-data').dict;
 const nDict = {};
 
-Object.keys(dict).map(function (key, index) {
-  if (nDict[dict[key]] === undefined) {
-    nDict[dict[key]] = [];
+for (const [nDict, occurences] of Object.entries(dict)) {
+  if (!nDict[occurences]) {
+    nDict[occurences] = [];
   }
-  nDict[dict[key]].push(key);
-});
+  nDict[occurences].push(nDict);
+}
 
 console.log(nDict);
