@@ -10,7 +10,6 @@ const content = process.argv[3];
 async function writeToFile () {
   try {
     await writeFile(filePath, content, 'utf-8');
-    console.log(`Successfully wrote '${content}' to '${filePath}'`);
   } catch (err) {
     console.error(err);
   }
