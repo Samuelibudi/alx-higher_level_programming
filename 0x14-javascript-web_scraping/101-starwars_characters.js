@@ -19,10 +19,15 @@ request(url, function (err, response, body) {
         break;
       }
     }
+    let numRequestsCompleted = 0;
     for (let j = 0; j < characters.length; j++) {
       request(characters[j], function (err, response, body) {
         if (err == null) {
           console.log(JSON.parse(body).name);
+          numRequestsCompleted++;
+          if (numRequestsCompleted === characters.length) {
+            process.exit(0);
+          }
         }
       });
     }
