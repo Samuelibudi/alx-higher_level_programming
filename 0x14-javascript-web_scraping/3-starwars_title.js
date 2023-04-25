@@ -12,8 +12,6 @@ request(url, (error, response, body) => {
     const movie = JSON.parse(body);
     if (movie.episode_id === movieId) {
       console.log(movie.title);
-    } else {
-      console.log(`No movie found with ID ${movieId}`);
     }
   }
 });
